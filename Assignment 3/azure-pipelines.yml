@@ -1,0 +1,45 @@
+trigger:
+  branches:
+    include:
+      - main
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  GROQ_API_KEY: $(GROQ_API_KEY)
+
+steps:
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '3.10'
+      addToPath: true
+    displayName: Set up Python 3.10
+
+  - script: |
+      python -m pip install --upgrade pip
+      pip install pytest pytest-playwright langgraph langchain-groq
+    displayName: Install Python dependencies
+
+  - script: |
+      playwright install --with-deps
+    displayName: Install Playwright browsers and dependencies
+
+  - script: |
+      python multi_agent_web_automation.py
+    displayName: Generate Playwright test from LangGraph workflow
+    env:
+      GROQ_API_KEY: $(GROQ_API_KEY)
+
+  - script: |
+      python -m pytest tests --junitxml=results.xml
+    displayName: Run generated tests
+    env:
+      GROQ_API_KEY: $(GROQ_API_KEY)
+
+  - task: PublishTestResults@2
+    inputs:
+      testResultsFormat: JUnit
+      testResultsFiles: results.xml
+      testRunTitle: Playwright Multi-Agent Tests
+    condition: succeededOrFailed()
