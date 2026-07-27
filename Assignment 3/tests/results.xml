@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<test_report>
+  <summary passed="11" failed="12" skipped="0" url="https://demoblaze.com" locator_count="23" />
+  <tests>
+    <testcase name="locator_0" status="failed" selector="button[aria-label=&quot;Close&quot;]" details="selector 'button[aria-label=&quot;Close&quot;]' was not visible" />
+    <testcase name="locator_1" status="failed" selector="input#recipient-email" details="selector 'input#recipient-email' was not visible" />
+    <testcase name="locator_2" status="failed" selector="input#recipient-name" details="selector 'input#recipient-name' was not visible" />
+    <testcase name="locator_3" status="failed" selector="textarea#message-text" details="selector 'textarea#message-text' was not visible" />
+    <testcase name="locator_4" status="failed" selector="button[type=&quot;button&quot;]" details="selector 'button[type=&quot;button&quot;]' was not visible" />
+    <testcase name="locator_5" status="failed" selector="input#sign-username" details="selector 'input#sign-username' was not visible" />
+    <testcase name="locator_6" status="failed" selector="input#sign-password" details="selector 'input#sign-password' was not visible" />
+    <testcase name="locator_7" status="failed" selector="input#loginusername" details="selector 'input#loginusername' was not visible" />
+    <testcase name="locator_8" status="failed" selector="input#loginpassword" details="selector 'input#loginpassword' was not visible" />
+    <testcase name="locator_9" status="failed" selector="button[aria-label=&quot;Toggle navigation&quot;]" details="selector 'button[aria-label=&quot;Toggle navigation&quot;]' was not visible" />
+    <testcase name="locator_10" status="passed" selector="a#nava" details="visible" />
+    <testcase name="locator_11" status="passed" selector="a[href=&quot;index.html&quot;]" details="visible" />
+    <testcase name="locator_12" status="passed" selector="a[href=&quot;#&quot;]" details="visible" />
+    <testcase name="locator_13" status="passed" selector="a#cartur" details="visible" />
+    <testcase name="locator_14" status="passed" selector="a#login2" details="visible" />
+    <testcase name="locator_15" status="failed" selector="a#logout2" details="selector 'a#logout2' was not visible" />
+    <testcase name="locator_16" status="failed" selector="a#nameofuser" details="selector 'a#nameofuser' was not visible" />
+    <testcase name="locator_17" status="passed" selector="a#signin2" details="visible" />
+    <testcase name="locator_18" status="passed" selector="a[href=&quot;#carouselExampleIndicators&quot;]" details="visible" />
+    <testcase name="locator_19" status="passed" selector="a#cat" details="visible" />
+    <testcase name="locator_20" status="passed" selector="a#itemc" details="visible" />
+    <testcase name="locator_21" status="passed" selector="button#prev2" details="visible" />
+    <testcase name="locator_22" status="passed" selector="button#next2" details="visible" />
+  </tests>
+</test_report>
